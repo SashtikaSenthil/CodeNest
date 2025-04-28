@@ -1,0 +1,166 @@
+:root {
+  --primary-gradient: linear-gradient(135deg, #ff7e5f, #feb47b);
+  --card-bg: rgba(255,255,255,0.2);
+  --card-hover: rgba(255,255,255,0.3);
+  --shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
+  --text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: var(--text-shadow);
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.topic-section {
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.topic-section:nth-child(2) { animation-delay: 0.1s; }
+.topic-section:nth-child(3) { animation-delay: 0.2s; }
+.topic-section:nth-child(4) { animation-delay: 0.3s; }
+
+.language-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-shadow: var(--text-shadow);
+  padding-left: 10px;
+  border-left: 4px solid white;
+}
+
+.topics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.topic-box {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background-color: white;
+  transition: 0.4s ease-out;
+}
+
+.topic-box:hover {
+  background: var(--card-hover);
+  transform: scale(1.05);
+}
+
+.topic-box:hover::before {
+  height: 100%;
+}
+
+.topic-box h2 {
+  margin: 0;
+  font-size: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.topic-box:hover h2 {
+  transform: translateX(4px);
+  transition: 0.3s;
+}
+
+.back-button {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(255,255,255,0.25);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.back-button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .language-title {
+    font-size: 20px;
+  }
+  
+  .topic-box h2 {
+    font-size: 18px;
+  }
+  
+  .back-button {
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+  }
+}

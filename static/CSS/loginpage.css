@@ -1,0 +1,355 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Animated Background */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+}
+
+.blob1 {
+  width: 500px;
+  height: 500px;
+  background: #4d65dd;
+  top: -100px;
+  right: -100px;
+  animation: move 15s infinite alternate;
+}
+
+.blob2 {
+  width: 600px;
+  height: 600px;
+  background: #a452e4;
+  bottom: -150px;
+  left: -100px;
+  animation: move 20s infinite alternate-reverse;
+}
+
+.blob3 {
+  width: 300px;
+  height: 300px;
+  background: #6a3093;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 10s infinite;
+}
+
+@keyframes move {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(100px, 100px) rotate(45deg); }
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+}
+
+/* Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  width: 380px;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  transform: skewX(-15deg);
+  pointer-events: none;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+/* Typography */
+h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Form Elements */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+}
+
+.input-group .toggle-password {
+  left: auto;
+  right: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.input-group .toggle-password:hover {
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  background: white;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Remember and forgot */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember-forgot input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.remember-forgot a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.remember-forgot a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-google:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+/* Switch text */
+.switch {
+  margin-top: 25px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.switch a {
+  color: #ffd700;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.switch a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Error and Success messages */
+.error, .success {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.3s;
+}
+
+.error {
+  background-color: rgba(255, 77, 77, 0.3);
+  border: 1px solid rgba(255, 77, 77, 0.5);
+}
+
+.success {
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .remember-forgot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

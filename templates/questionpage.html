@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards - CodeNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="topicTitle">Flashcards</h1>
+
+  <div class="info-box" id="topicInfo">
+    <p><b>Functions in Python:</b> Functions are blocks of reusable code that perform a specific task. They help in making code modular and clean.</p>
+    <p>Python provides an easy way to define functions using the <code>def</code> keyword. Functions allow developers to structure their code logically, promote reuse, and simplify complex problems.</p>
+    <p>Key Points:</p>
+    <ul>
+      <li>Functions improve code readability.</li>
+      <li>They reduce repetition and make debugging easier.</li>
+      <li>Arguments can be passed to functions for dynamic behavior.</li>
+    </ul>
+    <div style="text-align: center;">
+      <button class="start-btn" onclick="startFlashcards()">Let's Start</button>
+    </div>
+  </div>
+
+  <div class="flashcard-box" id="flashcardBox">
+    <!-- Flashcard question and options -->
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="navigation-buttons" id="navButtons">
+    <button id="prevBtn" onclick="prevCard()">Prev</button>
+    <button onclick="nextCard()">Next</button>
+  </div>
+
+  <div class="score-box" id="scoreBox">
+    <h2>Your Score: <span id="finalScore"></span></h2>
+  </div>
+</body>
+</html>

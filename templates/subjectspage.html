@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a Programming Language - CodeNest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/subjectspage.css') }}">
+  <script src="{{ url_for('static', filename='JS/subjectspage.js') }}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <div class="code-brackets">&lt;/&gt;</div>
+          <h1>CodeNest</h1>
+        </div>
+        <h2>Select Your Programming Journey</h2>
+      </header>
+      
+      <div class="subjects-grid">
+        <div class="subject-card" data-subject="python">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="icon">
+                <img src="{{ url_for('static', filename='IMAGES/python_logo.png') }}" alt="Google">
+              </div>
+              <h3>Python</h3>
+            </div>
+            <div class="card-back">
+              <h3>Python</h3>
+              <p>Perfect for automation, data science, AI, and backend development.</p>
+              <span class="difficulty">Beginner Friendly</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="subject-card" data-subject="javascript">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="icon">
+                <img src="{{ url_for('static', filename='IMAGES/javascript_logo.png') }}" alt="Google">
+              </div>
+              <h3>JavaScript</h3>
+            </div>
+            <div class="card-back">
+              <h3>JavaScript</h3>
+              <p>Build interactive websites, web applications, and server-side solutions.</p>
+              <span class="difficulty">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="subject-card" data-subject="htmlcss">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="icon">
+                <img src="{{ url_for('static', filename='IMAGES/html_logo.png') }}" alt="Google">
+              </div>
+              <h3>HTML & CSS</h3>
+            </div>
+            <div class="card-back">
+              <h3>HTML & CSS</h3>
+              <p>Create and style modern, responsive websites from scratch.</p>
+              <span class="difficulty">Beginner Friendly</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="subject-card" data-subject="java">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="icon">
+                <img src="{{ url_for('static', filename='IMAGES/java_logo.png') }}" alt="Google">
+              </div>
+              <h3>Java</h3>
+            </div>
+            <div class="card-back">
+              <h3>Java</h3>
+              <p>Enterprise applications, Android development, and robust systems.</p>
+              <span class="difficulty">Advanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <footer>
+        <p>Choose a language to continue your coding adventure</p>
+        <div class="decorative-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </footer>
+    </div>
+  
+  </body>
+  </html>
+  

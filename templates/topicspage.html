@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select a Topic - CodeNest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/topicspage.css') }}">
+  <script src="{{ url_for('static', filename='JS/topicspage.js') }}"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 id="subjectTitle">Choose a Topic</h1>
+      <p class="subtitle">Select a topic below to start practicing with flashcards</p>
+    </header>
+    
+    <div class="topic-section" id="pythonSection">
+      <h2 class="language-title">Python</h2>
+      <div class="topics-container">
+        <div class="topic-box" data-subject="python" data-topic="Variables & Data Types">
+          <h2>Variables & Data Types</h2>
+        </div>
+        <div class="topic-box" data-subject="python" data-topic="Loops">
+          <h2>Loops</h2>
+        </div>
+        <div class="topic-box" data-subject="python" data-topic="Functions">
+          <h2>Functions</h2>
+        </div>
+        <div class="topic-box" data-subject="python" data-topic="Object-Oriented Programming">
+          <h2>Object-Oriented Programming</h2>
+        </div>
+        <div class="topic-box" data-subject="python" data-topic="Modules">
+          <h2>Modules</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="topic-section" id="javascriptSection">
+      <h2 class="language-title">JavaScript</h2>
+      <div class="topics-container">
+        <div class="topic-box" data-subject="javascript" data-topic="Variables & Operators">
+          <h2>Variables & Operators</h2>
+        </div>
+        <div class="topic-box" data-subject="javascript" data-topic="DOM Manipulation">
+          <h2>DOM Manipulation</h2>
+        </div>
+        <div class="topic-box" data-subject="javascript" data-topic="Events">
+          <h2>Events</h2>
+        </div>
+        <div class="topic-box" data-subject="javascript" data-topic="Promises & Async">
+          <h2>Promises & Async</h2>
+        </div>
+        <div class="topic-box" data-subject="javascript" data-topic="APIs">
+          <h2>APIs</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="topic-section" id="htmlcssSection">
+      <h2 class="language-title">HTML & CSS</h2>
+      <div class="topics-container">
+        <div class="topic-box" data-subject="htmlcss" data-topic="HTML Basics">
+          <h2>HTML Basics</h2>
+        </div>
+        <div class="topic-box" data-subject="htmlcss" data-topic="CSS Styling">
+          <h2>CSS Styling</h2>
+        </div>
+        <div class="topic-box" data-subject="htmlcss" data-topic="Flexbox & Grid">
+          <h2>Flexbox & Grid</h2>
+        </div>
+        <div class="topic-box" data-subject="htmlcss" data-topic="Responsive Design">
+          <h2>Responsive Design</h2>
+        </div>
+        <div class="topic-box" data-subject="htmlcss" data-topic="Forms">
+          <h2>Forms</h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="topic-section" id="javaSection">
+      <h2 class="language-title">Java</h2>
+      <div class="topics-container">
+        <div class="topic-box" data-subject="java" data-topic="Classes & Objects">
+          <h2>Classes & Objects</h2>
+        </div>
+        <div class="topic-box" data-subject="java" data-topic="Inheritance">
+          <h2>Inheritance</h2>
+        </div>
+        <div class="topic-box" data-subject="java" data-topic="Collections">
+          <h2>Collections</h2>
+        </div>
+        <div class="topic-box" data-subject="java" data-topic="Exception Handling">
+          <h2>Exception Handling</h2>
+        </div>
+        <div class="topic-box" data-subject="java" data-topic="Multithreading">
+          <h2>Multithreading</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <button class="back-button" id="backButton">Back to Languages</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>

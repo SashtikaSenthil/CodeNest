@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to CodeNest</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/welcomepage.css') }}">
+  <script src="{{ url_for('static', filename='JS/welcomepage.js') }}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="particles-container" id="particles"></div>
+  
+  <div class="welcome-container">
+    <div class="logo">
+      <span class="code-tag">&lt;</span>CodeNest<span class="code-tag">/&gt;</span>
+    </div>
+    
+    <h1>Welcome to <span class="highlight">CodeNest</span></h1>
+    
+    <p>Your journey to becoming a coding professional starts now.</p>
+    
+    <div class="features">
+      <div class="feature">
+        <div class="icon">📚</div>
+        <span>Learn</span>
+      </div>
+      <div class="feature">
+        <div class="icon">💻</div>
+        <span>Practice</span>
+      </div>
+      <div class="feature">
+        <div class="icon">🚀</div>
+        <span>Build</span>
+      </div>
+    </div>
+    <button type="button" onclick="window.location.href='{{ url_for('subject') }}'" class="btn-primary">Start Learning</button>
+</div>
+</body>
+</html>
